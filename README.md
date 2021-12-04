@@ -3,9 +3,10 @@
  # A.📕Basic-Grammar  ↓↓↓
    * 1.variable
    * 2.basic math operation
-   * 3.if
-   * 4.For_and_while
-   * 5.random
+   * 3.type
+   * 4.if
+   * 5.For_and_while
+   * 6.random
   
   # B.📋sort  ↓↓↓
    * 1.bubble sort
