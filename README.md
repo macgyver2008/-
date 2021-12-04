@@ -7,9 +7,11 @@
    * For and while
    * random
    * if
-   * break 
+   
   
   # sort
-   
+   * bubble sort
+   * selective sort
   # Games
-    
+   * car game
+   * tic tac toe
