@@ -1,6 +1,6 @@
-# 📚list
+# 📚list  
  
- # 📕Basic-Grammar
+ # 📕Basic-Grammar  ↓↓↓
    * variable
    * basic math operation
    * list
@@ -9,10 +9,10 @@
    * if
    
   
-  # 📋sort
+  # 📋sort  ↓↓↓
    * bubble sort
    * selective sort
-  # 🎮Games
+  # 🎮Games  ↓↓↓
    * car game
    * tic tac toe
    * RPG(?)
