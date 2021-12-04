@@ -16,3 +16,5 @@
    * car game
    * tic tac toe
    * RPG(?)
+  # 💾Another
+   * 1*1 ~ 9*9
