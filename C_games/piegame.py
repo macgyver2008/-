@@ -1,5 +1,7 @@
 import pygame
 import random
+import numpy as up
+import scipy.special
 from datetime import datetime
 from datetime import timedelta
 SCREEN_WIDTH = 400
@@ -72,11 +74,15 @@ class Apple:
     def draw(self):
         draw_block(screen, self.color, self.position)
 
-    def random_move(self):
+    def random_move(self, avoid_pos):
         self.position = [random.randint(0, 19), random.randint(0, 19)]
+        while self.position in avoid_pos:
+            self.position = [random.randint(0, 19), random.randint(0, 19)]
+
+
 class Game:
     def __init__(self):
-        self.snake = Snake(GREEN, [9, 9], Offset.NONE)
+        self.snake = Snake(GREEN, [9, 9], Offset.UP)
         self.apple = Apple(RED, [3, 3])
 
     def draw(self):
@@ -111,8 +117,16 @@ class Game:
                         keydown_flag = True
 
             if self.snake.positions[0] == self.apple.position:
-                self.apple.random_move()
+                self.apple.random_move(self.snake.positions)
                 self.snake.grow()
+
+            shead = self.snake.positions[0]
+            if shead[0] < 0 or shead[0] > 19 or shead[1] < 0 or shead[1] > 19:
+                exit()
+            if shead in self.snake.positions[1:]:
+                exit()
+
+
 
 
             if timedelta(milliseconds=300) <= datetime.now() - last_movement:
