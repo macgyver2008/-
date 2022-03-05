@@ -1,3 +1,6 @@
+import numpy as up
+import scipy.special
+
 class NauralNetwark:
     #신경망 초기화
     #입력 노드, 히든노드, 출력노드의 개수와 학습을 초기화하고 가중치(Weight)행렬 생성
