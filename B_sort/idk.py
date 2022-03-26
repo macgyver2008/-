@@ -49,3 +49,29 @@ def insert_sort(A):
 
 B = insert_sort(A)
 print(B)
+
+
+
+
+
+
+
+
+
+
+
+n = int(input())
+A =[]
+for i in range(n):
+    A.append(int(input()))
+def bubble_sort() :
+    for i in range(n-1):
+        for k in range(n - i -1):
+            if A[k-1] > A[k]:
+                A[k], A[k-1] = A[k-1], A[k]
+    return A
+
+
+for i in bubble_sort():
+    print(i)
+
