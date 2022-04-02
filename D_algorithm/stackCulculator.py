@@ -44,7 +44,8 @@ class Operator:
     #클래스 정보을 표현
     def __repr__(self):
         return  f'Operator({self.op})'
-    def operate(self, X, Y):
+
+    def operation(self, X, Y):
         if self.op == '+':
             return X + Y
         elif self.op == '-':
@@ -108,7 +109,10 @@ class IntCalcurator:
                 operand2 = stack.pop()
                 operand1 = stack.pop()
                 stack.append(x.operation(operand1, operand2))
-            
-            if len(stack) > 1:
-                raise ValueError('잘못된 수식을 계산하려했음')
+
+        if len(stack) > 1:
+            raise ValueError('잘못된 수식을 계산하려했음')
         return stack.pop()
+calc = IntCalcurator()
+calc.set_expression('12*20-3+4')
+print(calc.evlution())
